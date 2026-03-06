@@ -4,6 +4,22 @@ import random
 def bubbleSort(items:list):
     swaps = 0
     comparisons = 0
+    n=len(items)
+
+    while True:
+
+        didSwap = False
+        for i in range(n-1):
+
+            comparisons += 1
+            if items [i] > items [i+1]:
+                items[i], items[i + 1] = items [i+1], items[i]
+                swaps+=1
+            didSwap = True
+        if not didSwap:
+            break
+    return items, swaps, comparisons
+
 
     return items, swaps, comparisons
 
